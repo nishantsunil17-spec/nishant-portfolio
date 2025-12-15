@@ -6,70 +6,177 @@
 
     <!-- SEO Meta Tags -->
     <title>Nishant Pardeshi | Data Engineer | Python, SQL & Azure</title>
-    <meta name="description" content="Azure Data Engineer with 3 years of experience building scalable data pipelines, ETL workflows, and analytics solutions. Based in London, UK. Python, SQL, Spark, Azure Data Factory.">
-    <meta name="keywords" content="Azure Data Engineer, Data Engineer, Big Data Analyst, Python Developer, SQL Developer, ETL, Azure Data Factory, London UK">
+    <meta name="description" content="Data Engineer with 3 years of experience building scalable data pipelines, ETL workflows, and analytics solutions. Based in London, UK. Python, SQL, Spark, Azure Data Factory.">
+    <meta name="keywords" content="Data Engineer, Big Data Analyst, Python Developer, SQL Developer, ETL, Azure Data Factory, London UK">
     <meta name="author" content="Nishant Sunil Pardeshi">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Nishant Pardeshi | Data Engineer">
-    <meta property="og:description" content="Azure Data Engineer with 3 years of experience building scalable data pipelines and analytics solutions. Based in London, UK.">
+    <meta property="og:description" content="Data Engineer with 3 years of experience building scalable data pipelines and analytics solutions. Based in London, UK.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_GB">
+    <meta property="og:url" content="https://nishantpardeshi.netlify.app">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Nishant Pardeshi | Data Engineer">
-    <meta name="twitter:description" content="Azure Data Engineer with 3 years of experience building scalable data pipelines and analytics solutions.">
+    <meta name="twitter:description" content="Data Engineer with 3 years of experience building scalable data pipelines and analytics solutions.">
 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="grid-lines"></div>
+        <div class="floating-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <canvas id="particleCanvas"></canvas>
+    </div>
+
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">NP</a>
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">NP</span>
+                <span class="logo-bracket">}</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact" class="nav-cta">Contact</a></li>
+                <li><a href="#about" data-text="About">About</a></li>
+                <li><a href="#expertise" data-text="Expertise">Expertise</a></li>
+                <li><a href="#skills" data-text="Skills">Skills</a></li>
+                <li><a href="#experience" data-text="Experience">Experience</a></li>
+                <li><a href="#projects" data-text="Projects">Projects</a></li>
+                <li><a href="#education" data-text="Education">Education</a></li>
+                <li><a href="#contact" class="nav-cta">
+                    <span class="cta-icon">&gt;</span> Contact
+                </a></li>
             </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <div class="hero-photo">
-                <img src="photo.jpeg" alt="Nishant Sunil Pardeshi" />
+            <div class="hero-photo-container">
+                <div class="photo-ring"></div>
+                <div class="photo-ring ring-2"></div>
+                <div class="hero-photo">
+                    <img src="photo.jpeg" alt="Nishant Sunil Pardeshi" />
+                </div>
+                <div class="photo-status">
+                    <span class="status-dot"></span>
+                    <span>Available for hire</span>
+                </div>
             </div>
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-name">Nishant Sunil Pardeshi</h1>
-            <h2 class="hero-title">Data Engineer | Python | SQL | Azure | Spark</h2>
-            <p class="hero-statement">
-                I build data pipelines that don't break. 3 years of delivering production-grade
-                ETL systems, optimizing SQL performance, and managing databases with 99.9% uptime.
-                Focused on reliability, scale, and clean data.
-            </p>
+
+            <div class="hero-text">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">~/nishant/profile</span>
+                </div>
+                <div class="typing-container">
+                    <span class="terminal-prompt">$</span>
+                    <h1 class="hero-name glitch" data-text="Nishant Pardeshi">Nishant Pardeshi</h1>
+                </div>
+                <h2 class="hero-title">
+                    <span class="title-line">
+                        <span class="code-comment">// </span>
+                        <span class="role-text" id="roleText"></span>
+                        <span class="cursor-blink">|</span>
+                    </span>
+                </h2>
+                <p class="hero-statement">
+                    <span class="highlight-text">Building data pipelines that don't break.</span>
+                    3 years delivering production-grade ETL systems with
+                    <span class="metric">99.9% uptime</span> and
+                    <span class="metric">25% faster queries</span>.
+                </p>
+            </div>
+
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                <a href="resume.pdf" download="Nishant_Pardeshi_Resume.pdf" class="btn btn-secondary">
-                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <a href="#projects" class="btn btn-primary magnetic">
+                    <span class="btn-content">
+                        <span class="btn-icon">&#9654;</span>
+                        View Projects
+                    </span>
+                    <span class="btn-glow"></span>
+                </a>
+                <a href="#contact" class="btn btn-secondary magnetic">
+                    <span class="btn-content">Contact Me</span>
+                </a>
+                <a href="resume.pdf" download="Nishant_Pardeshi_Resume.pdf" class="btn btn-outline magnetic">
+                    <span class="btn-content">
+                        <svg class="btn-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                         </svg>
-                        Download Resume
-                    </a>
+                        Resume
+                    </span>
+                </a>
             </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Years Exp</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">99.9<span class="stat-unit">%</span></span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">25<span class="stat-unit">%</span></span>
+                    <span class="stat-label">Faster Queries</span>
+                </div>
+            </div>
+
             <div class="hero-location">
-                <span class="status-dot"></span>
-                <span>London, UK | Open to relocate across UK & EU</span>
+                <span class="location-pin">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                </span>
+                <span>London, UK</span>
+                <span class="location-separator">|</span>
+                <span class="relocate-badge">Open to relocate across UK & EU</span>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll to explore</span>
             </div>
         </div>
     </section>
@@ -77,43 +184,90 @@
     <!-- About Section -->
     <section class="section about" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">
+                    <span class="title-decoration">&lt;</span>
+                    About Me
+                    <span class="title-decoration">/&gt;</span>
+                </h2>
+            </div>
+
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-lead">
-                        Python & SQL Developer with 3 years of experience building scalable
-                        data pipelines, automating ETL workflows, and delivering analytics-ready datasets.
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                            <span class="code-filename">about.py</span>
+                        </div>
+                        <pre class="code-content"><code><span class="code-keyword">class</span> <span class="code-class">DataEngineer</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
+        self.name = <span class="code-string">"Nishant Pardeshi"</span>
+        self.role = <span class="code-string">"Data Engineer"</span>
+        self.experience = <span class="code-number">3</span>  <span class="code-comment"># years</span>
+        self.location = <span class="code-string">"London, UK"</span>
+
+    <span class="code-keyword">def</span> <span class="code-function">skills</span>(self):
+        <span class="code-keyword">return</span> [
+            <span class="code-string">"Python"</span>, <span class="code-string">"SQL"</span>, <span class="code-string">"Azure"</span>,
+            <span class="code-string">"Spark"</span>, <span class="code-string">"ETL Pipelines"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-function">achievements</span>(self):
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"uptime"</span>: <span class="code-string">"99.9%"</span>,
+            <span class="code-string">"query_optimization"</span>: <span class="code-string">"25%"</span>,
+            <span class="code-string">"data_loss"</span>: <span class="code-number">0</span>
+        }</code></pre>
+                    </div>
+
+                    <p class="about-description">
+                        At <span class="highlight">Infosys</span>, I owned end-to-end data workflows:
+                        building Python scripts for API extraction, designing performance-tuned SQL queries,
+                        and orchestrating ETL/ELT pipelines using <span class="highlight">Azure Data Factory</span>.
                     </p>
-                    <p>
-                        At Infosys, I owned end-to-end data workflows: building Python scripts for API extraction
-                        and automation, designing performance-tuned SQL queries and stored procedures, and
-                        orchestrating ETL/ELT pipelines using Azure Data Factory. I managed SQL Server databases
-                        that maintained 99.9% uptime with zero data loss incidents.
-                    </p>
-                    <p>
-                        I focus on what matters in production: data quality, query performance, and system
-                        reliability. My work improved SQL query speeds by 25% through systematic indexing
-                        and optimization. I build dashboards in Power BI and Tableau that translate
-                        complex data into actionable business insights.
-                    </p>
-                    <p>
-                        Currently completing my MSc in Business Analytics & Big Data at the University
-                        of Liverpool, strengthening my expertise in predictive modeling and large-scale
-                        data processing with Spark and Delta Lake.
+                    <p class="about-description">
+                        Currently completing my <span class="highlight">MSc in Business Analytics & Big Data</span>
+                        at the University of Liverpool, strengthening expertise in predictive modeling and
+                        large-scale data processing.
                     </p>
                 </div>
-                <div class="about-highlights">
-                    <div class="highlight-card">
-                        <span class="highlight-number">3</span>
-                        <span class="highlight-label">Years Experience</span>
+
+                <div class="about-cards">
+                    <div class="metric-card glass-card">
+                        <div class="metric-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="metric-value">3+</div>
+                        <div class="metric-label">Years Experience</div>
+                        <div class="card-glow"></div>
                     </div>
-                    <div class="highlight-card">
-                        <span class="highlight-number">99.9%</span>
-                        <span class="highlight-label">Database Uptime</span>
+                    <div class="metric-card glass-card">
+                        <div class="metric-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <div class="metric-value">99.9%</div>
+                        <div class="metric-label">Database Uptime</div>
+                        <div class="card-glow"></div>
                     </div>
-                    <div class="highlight-card">
-                        <span class="highlight-number">25%</span>
-                        <span class="highlight-label">Query Speed Improvement</span>
+                    <div class="metric-card glass-card">
+                        <div class="metric-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                                <polyline points="17 6 23 6 23 12"/>
+                            </svg>
+                        </div>
+                        <div class="metric-value">25%</div>
+                        <div class="metric-label">Query Speed Boost</div>
+                        <div class="card-glow"></div>
                     </div>
                 </div>
             </div>
@@ -123,11 +277,21 @@
     <!-- What I Build Section -->
     <section class="section expertise" id="expertise">
         <div class="container">
-            <h2 class="section-title">What I Build</h2>
-            <p class="section-subtitle">Core competencies across the data engineering stack</p>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">
+                    <span class="title-decoration">&lt;</span>
+                    What I Build
+                    <span class="title-decoration">/&gt;</span>
+                </h2>
+                <p class="section-subtitle">Core competencies across the data engineering stack</p>
+            </div>
+
             <div class="expertise-grid">
-                <div class="expertise-card">
+                <div class="expertise-card glass-card" data-aos="fade-up">
+                    <div class="card-number">01</div>
                     <div class="expertise-icon">
+                        <div class="icon-glow"></div>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                         </svg>
@@ -136,12 +300,15 @@
                     <p class="expertise-tech">Python</p>
                     <p class="expertise-desc">
                         Custom Python scripts for REST API data extraction, automated data processing,
-                        and scheduled ETL workflows. Built systems handling multiple data sources
-                        including APIs, Excel, and CSVs.
+                        and scheduled ETL workflows handling multiple data sources.
                     </p>
+                    <div class="card-border"></div>
                 </div>
-                <div class="expertise-card">
+
+                <div class="expertise-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-number">02</div>
                     <div class="expertise-icon">
+                        <div class="icon-glow"></div>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0-6v6m18-6v6"/>
                         </svg>
@@ -149,13 +316,16 @@
                     <h3 class="expertise-title">ETL / ELT Orchestration</h3>
                     <p class="expertise-tech">Azure Data Factory</p>
                     <p class="expertise-desc">
-                        End-to-end pipeline design and implementation using Azure Data Factory.
-                        Data transformation, validation, and loading into analytical data stores
-                        with error handling and monitoring.
+                        End-to-end pipeline design using Azure Data Factory with data transformation,
+                        validation, and error handling.
                     </p>
+                    <div class="card-border"></div>
                 </div>
-                <div class="expertise-card">
+
+                <div class="expertise-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-number">03</div>
                     <div class="expertise-icon">
+                        <div class="icon-glow"></div>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <ellipse cx="12" cy="5" rx="9" ry="3"/>
                             <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
@@ -165,13 +335,16 @@
                     <h3 class="expertise-title">Warehousing & SQL Performance</h3>
                     <p class="expertise-tech">SQL Server / Azure SQL</p>
                     <p class="expertise-desc">
-                        Database design, stored procedures, and query optimization. Achieved 25%
-                        performance improvements through indexing strategies and execution plan
-                        analysis. Production systems with 99.9% uptime.
+                        Database design, stored procedures, and query optimization achieving 25%
+                        performance improvements with 99.9% uptime.
                     </p>
+                    <div class="card-border"></div>
                 </div>
-                <div class="expertise-card">
+
+                <div class="expertise-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-number">04</div>
                     <div class="expertise-icon">
+                        <div class="icon-glow"></div>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                         </svg>
@@ -179,10 +352,10 @@
                     <h3 class="expertise-title">Big Data Processing</h3>
                     <p class="expertise-tech">Spark / Delta Lake</p>
                     <p class="expertise-desc">
-                        Large-scale data processing using Apache Spark and PySpark. Experience
-                        with Hadoop ecosystems and Delta Lake for reliable, ACID-compliant
-                        data lakes.
+                        Large-scale data processing using Apache Spark, PySpark, and Delta Lake
+                        for ACID-compliant data lakes.
                     </p>
+                    <div class="card-border"></div>
                 </div>
             </div>
         </div>
@@ -191,57 +364,106 @@
     <!-- Skills Section -->
     <section class="section skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Languages</h3>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>SQL</li>
-                    </ul>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">
+                    <span class="title-decoration">&lt;</span>
+                    Tech Stack
+                    <span class="title-decoration">/&gt;</span>
+                </h2>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-orbit">
+                    <div class="orbit-center">
+                        <span>Core</span>
+                        <span>Skills</span>
+                    </div>
+                    <div class="orbit-ring ring-1">
+                        <div class="skill-planet" style="--delay: 0s;"><span>Python</span></div>
+                        <div class="skill-planet" style="--delay: -5s;"><span>SQL</span></div>
+                        <div class="skill-planet" style="--delay: -10s;"><span>Azure</span></div>
+                    </div>
+                    <div class="orbit-ring ring-2">
+                        <div class="skill-planet" style="--delay: -2s;"><span>Spark</span></div>
+                        <div class="skill-planet" style="--delay: -6s;"><span>Pandas</span></div>
+                        <div class="skill-planet" style="--delay: -10s;"><span>PySpark</span></div>
+                        <div class="skill-planet" style="--delay: -14s;"><span>Hadoop</span></div>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Libraries & Frameworks</h3>
-                    <ul class="skill-list">
-                        <li>Pandas</li>
-                        <li>NumPy</li>
-                        <li>PySpark</li>
-                        <li>Scikit-learn</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Big Data</h3>
-                    <ul class="skill-list">
-                        <li>Apache Spark</li>
-                        <li>Hadoop</li>
-                        <li>Delta Lake</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Databases</h3>
-                    <ul class="skill-list">
-                        <li>Microsoft SQL Server</li>
-                        <li>Azure SQL Database</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">ETL & Cloud</h3>
-                    <ul class="skill-list">
-                        <li>Azure Data Factory</li>
-                        <li>Microsoft Azure</li>
-                        <li>Custom Python ETL</li>
-                        <li>REST API Integration</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Visualization & Tools</h3>
-                    <ul class="skill-list">
-                        <li>Power BI</li>
-                        <li>Tableau</li>
-                        <li>Git & GitHub</li>
-                        <li>Excel</li>
-                    </ul>
+
+                <div class="skills-list">
+                    <div class="skill-category glass-card">
+                        <h3 class="skill-category-title">
+                            <span class="cat-icon">&#60;/&#62;</span>
+                            Languages
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3 class="skill-category-title">
+                            <span class="cat-icon">&#9881;</span>
+                            Libraries
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">PySpark</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3 class="skill-category-title">
+                            <span class="cat-icon">&#9729;</span>
+                            Big Data
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Apache Spark</span>
+                            <span class="skill-tag">Hadoop</span>
+                            <span class="skill-tag">Delta Lake</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3 class="skill-category-title">
+                            <span class="cat-icon">&#128451;</span>
+                            Databases
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SQL Server</span>
+                            <span class="skill-tag">Azure SQL</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3 class="skill-category-title">
+                            <span class="cat-icon">&#9730;</span>
+                            ETL & Cloud
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Azure Data Factory</span>
+                            <span class="skill-tag">Microsoft Azure</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3 class="skill-category-title">
+                            <span class="cat-icon">&#128200;</span>
+                            Visualization
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -250,48 +472,73 @@
     <!-- Experience Section -->
     <section class="section experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="experience-info">
-                        <h3 class="experience-role">System Associate</h3>
-                        <p class="experience-company">Infosys Pvt Ltd</p>
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">
+                    <span class="title-decoration">&lt;</span>
+                    Experience
+                    <span class="title-decoration">/&gt;</span>
+                </h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
                     </div>
-                    <div class="experience-meta">
-                        <span class="experience-duration">Dec 2021 - Aug 2024</span>
-                        <span class="experience-length">2 years 9 months</span>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div class="timeline-info">
+                                <h3 class="timeline-role">System Associate</h3>
+                                <p class="timeline-company">Infosys Pvt Ltd</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-duration">Dec 2021 - Aug 2024</span>
+                                <span class="timeline-length">2 years 9 months</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>
+                                <span class="bullet-icon">&#10095;</span>
+                                <strong>Built and optimized Python scripts</strong> for automation, data processing,
+                                API extraction, and daily ETL workflows
+                            </li>
+                            <li>
+                                <span class="bullet-icon">&#10095;</span>
+                                <strong>Improved SQL query performance by 25%</strong> through indexing strategies,
+                                query refactoring, and execution plan analysis
+                            </li>
+                            <li>
+                                <span class="bullet-icon">&#10095;</span>
+                                <strong>Built ETL/ELT pipelines</strong> using Python and Azure Data Factory,
+                                integrating APIs, Excel, CSVs, and databases
+                            </li>
+                            <li>
+                                <span class="bullet-icon">&#10095;</span>
+                                <strong>Managed SQL Server databases with 99.9% uptime</strong>,
+                                ensuring data accuracy and reliability
+                            </li>
+                            <li>
+                                <span class="bullet-icon">&#10095;</span>
+                                <strong>Implemented backup & disaster recovery</strong>
+                                with zero data loss incidents
+                            </li>
+                            <li>
+                                <span class="bullet-icon">&#10095;</span>
+                                <strong>Built Power BI and Tableau dashboards</strong>
+                                for business decision-making
+                            </li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span>
+                            <span>SQL Server</span>
+                            <span>Azure</span>
+                            <span>Power BI</span>
+                            <span>ETL</span>
+                        </div>
                     </div>
                 </div>
-                <ul class="experience-bullets">
-                    <li>
-                        <strong>Built and optimized Python scripts</strong> for automation, data processing,
-                        API extraction, and daily ETL workflows across multiple data sources
-                    </li>
-                    <li>
-                        <strong>Designed and performance-tuned SQL queries</strong>, stored procedures,
-                        indexing strategies, and views, improving query speed by 25%
-                    </li>
-                    <li>
-                        <strong>Built and supported ETL/ELT pipelines</strong> using Python and Azure Data Factory,
-                        integrating APIs, Excel, CSVs, and relational databases
-                    </li>
-                    <li>
-                        <strong>Managed and optimized large SQL Server databases</strong> with 99.9% uptime,
-                        ensuring data accuracy and reliability across production systems
-                    </li>
-                    <li>
-                        <strong>Performed complex data cleansing, transformation, and validation</strong>
-                        for analytics and reporting systems with strict data quality standards
-                    </li>
-                    <li>
-                        <strong>Implemented backup, disaster recovery, and security protocols</strong>
-                        with zero data loss incidents throughout tenure
-                    </li>
-                    <li>
-                        <strong>Built end-to-end dashboards</strong> using Power BI and Tableau
-                        to support business and operational decision-making
-                    </li>
-                </ul>
             </div>
         </div>
     </section>
@@ -299,143 +546,194 @@
     <!-- Projects Section -->
     <section class="section projects" id="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">
+                    <span class="title-decoration">&lt;</span>
+                    Projects
+                    <span class="title-decoration">/&gt;</span>
+                </h2>
+            </div>
+
             <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Predictive Customer Churn Analysis</h3>
-                        <span class="project-date">Sept 2025</span>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">NumPy</span>
-                        <span class="tag">Scikit-learn</span>
+                <article class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-category">Machine Learning</span>
+                        </div>
+                        <div class="project-pattern"></div>
                     </div>
                     <div class="project-content">
-                        <div class="project-section">
-                            <h4>Problem</h4>
-                            <p>
-                                Businesses needed to identify at-risk customers before they churned
-                                to enable proactive retention strategies and reduce customer acquisition costs.
-                            </p>
+                        <div class="project-header">
+                            <h3 class="project-title">Predictive Customer Churn Analysis</h3>
+                            <span class="project-date">Sept 2025</span>
                         </div>
-                        <div class="project-section">
-                            <h4>Approach</h4>
-                            <p>
-                                Built an end-to-end analytics pipeline covering data ingestion, cleaning,
-                                and feature engineering. Conducted exploratory data analysis to identify
-                                churn drivers and prepared data for ML modeling.
-                            </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">NumPy</span>
                         </div>
-                        <div class="project-section">
-                            <h4>Output</h4>
-                            <p>
-                                Trained and evaluated multiple classification models. Selected Logistic
-                                Regression as the final model. Created insight-driven visualizations
-                                using Matplotlib and Seaborn.
-                            </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Problem</span>
+                                <p>Identify at-risk customers before churn to enable proactive retention strategies.</p>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Approach</span>
+                                <p>Built end-to-end ML pipeline with data ingestion, cleaning, feature engineering, and EDA.</p>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Output</span>
+                                <p>Trained Logistic Regression model with visualizations using Matplotlib and Seaborn.</p>
+                            </div>
                         </div>
-                        <div class="project-section project-impact">
-                            <h4>Impact</h4>
-                            <p><strong>85% model accuracy</strong> - Provided actionable predictions for customer retention teams.</p>
+                        <div class="project-impact">
+                            <span class="impact-icon">&#9889;</span>
+                            <span class="impact-text"><strong>85% model accuracy</strong> - Actionable predictions for retention teams</span>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Solvara Automotive Simulation</h3>
-                        <span class="project-date">Jul - Sept 2025</span>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Excel</span>
-                        <span class="tag">Power BI</span>
+                <article class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <span class="project-category">Data Analytics</span>
+                        </div>
+                        <div class="project-pattern pattern-2"></div>
                     </div>
                     <div class="project-content">
-                        <div class="project-section">
-                            <h4>Problem</h4>
-                            <p>
-                                A simulated automotive manufacturer needed to optimize production
-                                processes and understand financial performance drivers to improve
-                                operational efficiency.
-                            </p>
+                        <div class="project-header">
+                            <h3 class="project-title">Solvara Automotive Simulation</h3>
+                            <span class="project-date">Jul - Sept 2025</span>
                         </div>
-                        <div class="project-section">
-                            <h4>Approach</h4>
-                            <p>
-                                Analyzed large production and financial datasets using Python and Excel.
-                                Identified inefficiencies in manufacturing workflows and correlated
-                                them with financial outcomes.
-                            </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Excel</span>
+                            <span class="tag">Power BI</span>
                         </div>
-                        <div class="project-section">
-                            <h4>Output</h4>
-                            <p>
-                                Built interactive Power BI dashboards to visualize KPIs and strategic
-                                outcomes. Delivered data-driven recommendations to stakeholders.
-                            </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Problem</span>
+                                <p>Optimize manufacturing processes and understand financial performance drivers.</p>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Approach</span>
+                                <p>Analyzed large production and financial datasets to identify inefficiencies.</p>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Output</span>
+                                <p>Interactive Power BI dashboards visualizing KPIs and strategic outcomes.</p>
+                            </div>
                         </div>
-                        <div class="project-section project-impact">
-                            <h4>Impact</h4>
-                            <p><strong>20% manufacturing efficiency improvement</strong> - Identified through data-driven process optimization.</p>
+                        <div class="project-impact">
+                            <span class="impact-icon">&#9889;</span>
+                            <span class="impact-text"><strong>20% efficiency improvement</strong> - Data-driven process optimization</span>
                         </div>
-                    </div>
-                    <div class="project-context">
-                        <span>University of Liverpool</span>
+                        <div class="project-context">
+                            <span>University of Liverpool</span>
+                        </div>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Education & Certifications Section -->
+    <!-- Education Section -->
     <section class="section education" id="education">
         <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">
+                    <span class="title-decoration">&lt;</span>
+                    Education & Certifications
+                    <span class="title-decoration">/&gt;</span>
+                </h2>
+            </div>
+
             <div class="education-grid">
                 <div class="education-column">
-                    <h3 class="subsection-title">Education</h3>
-                    <div class="education-card">
-                        <h4 class="degree">MSc Business Analytics & Big Data</h4>
-                        <p class="institution">University of Liverpool</p>
-                        <span class="year">Sept 2024 - Dec 2025</span>
+                    <h3 class="subsection-title">
+                        <span class="subsection-icon">&#127891;</span>
+                        Education
+                    </h3>
+                    <div class="education-card glass-card">
+                        <div class="edu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <div class="edu-content">
+                            <h4 class="degree">MSc Business Analytics & Big Data</h4>
+                            <p class="institution">University of Liverpool</p>
+                            <span class="year">Sept 2024 - Dec 2025</span>
+                        </div>
                     </div>
-                    <div class="education-card">
-                        <h4 class="degree">BCA (Software Development)</h4>
-                        <p class="institution">Savitribai Phule Pune University</p>
-                        <span class="year">Jun 2018 - Jun 2021</span>
+                    <div class="education-card glass-card">
+                        <div class="edu-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <div class="edu-content">
+                            <h4 class="degree">BCA (Software Development)</h4>
+                            <p class="institution">Savitribai Phule Pune University</p>
+                            <span class="year">Jun 2018 - Jun 2021</span>
+                        </div>
                     </div>
                 </div>
+
                 <div class="education-column">
-                    <h3 class="subsection-title">Certifications</h3>
-                    <ul class="certifications-list">
-                        <li>
-                            <span class="cert-name">Azure Fundamentals (AZ-900)</span>
-                            <span class="cert-issuer">Microsoft</span>
-                        </li>
-                        <li>
-                            <span class="cert-name">Azure Data Fundamentals (DP-900)</span>
-                            <span class="cert-issuer">Microsoft</span>
-                        </li>
-                        <li>
-                            <span class="cert-name">Python for Data Science</span>
-                            <span class="cert-issuer">IBM</span>
-                        </li>
-                        <li>
-                            <span class="cert-name">Certified Python & MySQL Associate</span>
-                            <span class="cert-issuer">Infosys</span>
-                        </li>
-                        <li>
-                            <span class="cert-name">SQL for Data Analysis</span>
-                            <span class="cert-issuer">Udacity</span>
-                        </li>
-                        <li>
-                            <span class="cert-name">Data Associate Certification</span>
-                            <span class="cert-issuer">Symbiosis Skills & Professional University, Pune</span>
-                        </li>
-                    </ul>
+                    <h3 class="subsection-title">
+                        <span class="subsection-icon">&#127942;</span>
+                        Certifications
+                    </h3>
+                    <div class="certifications-grid">
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge azure">AZ</div>
+                            <div class="cert-info">
+                                <span class="cert-name">Azure Fundamentals (AZ-900)</span>
+                                <span class="cert-issuer">Microsoft</span>
+                            </div>
+                        </div>
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge azure">DP</div>
+                            <div class="cert-info">
+                                <span class="cert-name">Azure Data Fundamentals (DP-900)</span>
+                                <span class="cert-issuer">Microsoft</span>
+                            </div>
+                        </div>
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge ibm">PY</div>
+                            <div class="cert-info">
+                                <span class="cert-name">Python for Data Science</span>
+                                <span class="cert-issuer">IBM</span>
+                            </div>
+                        </div>
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge infosys">IN</div>
+                            <div class="cert-info">
+                                <span class="cert-name">Certified Python & MySQL Associate</span>
+                                <span class="cert-issuer">Infosys</span>
+                            </div>
+                        </div>
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge udacity">SQL</div>
+                            <div class="cert-info">
+                                <span class="cert-name">SQL for Data Analysis</span>
+                                <span class="cert-issuer">Udacity</span>
+                            </div>
+                        </div>
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge symbiosis">DA</div>
+                            <div class="cert-info">
+                                <span class="cert-name">Data Associate Certification</span>
+                                <span class="cert-issuer">Symbiosis University, Pune</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -444,48 +742,74 @@
     <!-- Contact Section -->
     <section class="section contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-intro">
-                I'm actively seeking Data Engineer and Big Data Analyst
-                roles in the UK and EU. Let's discuss how I can contribute to your data team.
-            </p>
-            <div class="contact-grid">
-                <a href="mailto:nishantsunil17@gmail.com" class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
+            <div class="section-header">
+                <span class="section-number">07</span>
+                <h2 class="section-title">
+                    <span class="title-decoration">&lt;</span>
+                    Get In Touch
+                    <span class="title-decoration">/&gt;</span>
+                </h2>
+            </div>
+
+            <div class="contact-content">
+                <p class="contact-intro">
+                    I'm actively seeking <span class="highlight">Data Engineer</span> and
+                    <span class="highlight">Big Data Analyst</span> roles in the UK and EU.
+                    Let's discuss how I can contribute to your data team.
+                </p>
+
+                <div class="contact-grid">
+                    <a href="mailto:nishantsunil17@gmail.com" class="contact-card glass-card magnetic">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">nishantsunil17@gmail.com</span>
+                        <div class="card-shine"></div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/nishantpardeshi/" target="_blank" rel="noopener noreferrer" class="contact-card glass-card magnetic">
+                        <div class="contact-icon linkedin">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/>
+                            </svg>
+                        </div>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/nishantpardeshi</span>
+                        <div class="card-shine"></div>
+                    </a>
+
+                    <a href="tel:+447586609012" class="contact-card glass-card magnetic">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                        </div>
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">+44 7586 609012</span>
+                        <div class="card-shine"></div>
+                    </a>
+
+                    <div class="contact-card glass-card location-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <span class="contact-label">Location</span>
+                        <span class="contact-value">London, UK</span>
+                        <div class="card-shine"></div>
                     </div>
-                    <span class="contact-label">Email</span>
-                    <span class="contact-value">nishantsunil17@gmail.com</span>
-                </a>
-                <a href="https://www.linkedin.com/in/nishantpardeshi/" target="_blank" rel="noopener noreferrer" class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/>
-                        </svg>
-                    </div>
-                    <span class="contact-label">LinkedIn</span>
-                    <span class="contact-value">linkedin.com/in/nishantpardeshi</span>
-                </a>
-                <a href="tel:+447586609012" class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-                        </svg>
-                    </div>
-                    <span class="contact-label">Phone</span>
-                    <span class="contact-value">+44 7586 609012</span>
-                </a>
-                <div class="contact-card contact-card-static">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                    </div>
-                    <span class="contact-label">Location</span>
-                    <span class="contact-value">London, UK</span>
+                </div>
+
+                <div class="cta-section">
+                    <a href="mailto:nishantsunil17@gmail.com" class="big-cta magnetic">
+                        <span class="cta-text">Let's Work Together</span>
+                        <span class="cta-arrow">&#8594;</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -494,7 +818,15 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Nishant Sunil Pardeshi. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">{</span>
+                    <span class="logo-text">NP</span>
+                    <span class="logo-bracket">}</span>
+                </div>
+                <p class="footer-text">Designed & Built by Nishant Pardeshi</p>
+                <p class="footer-copyright">&copy; 2024 All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
